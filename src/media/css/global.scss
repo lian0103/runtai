@@ -1,0 +1,37 @@
+/* global setting */
+@import "~bootstrap/scss/bootstrap";
+
+$mainColor:#1E9D98;
+
+$fontColorWhite:#fff; 
+$fontColorBlack:#323232;
+
+$fontSizeSmall: 14px;
+$fontSizeMedium: 16px;
+$fontSizeTitle: 24px;
+
+$grayBackGroung : #DBDFE6;
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.App{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  // background-color: #f33;
+}
+
+.containWidth{
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}

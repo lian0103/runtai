@@ -1,0 +1,53 @@
+@import 'src/media/css/global.scss';
+
+.infobox{
+    width: 100vw;
+    padding: 15px 0;
+    background-color: $grayBackGroung;
+    background-image: url('../../media/img/abs-bg3.png');
+    background-size: cover;
+    .flexbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .news{
+            flex-grow: 1;
+            flex-basis: 40%;
+            h3{
+                font-size: 22px;
+                font-weight: 700;
+            }
+            ul{
+                li{
+                    color: #4a4a4a;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+                li:before{
+                    content: ' · ';
+                    color: $mainColor;
+                    font-size: 22px;
+                }
+            }
+        }
+        .records{
+            flex-grow: 1;
+            display: flex;
+
+            .item{
+                font-size: 14px;
+                padding: 0px 10px;
+                span{
+                    font-size: 1.5em;
+                    font-weight: 800;
+                }
+
+                svg{
+                    font-size: 3.5em;
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
