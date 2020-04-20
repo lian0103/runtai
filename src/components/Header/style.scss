@@ -19,19 +19,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        li{
+        a{
+            text-decoration: none;
             background-color: none;
             height: 40px;
             line-height: 40px;
             display: block;
             padding: 0 15px;
+            color: $fontColorBlack;
             cursor: pointer;
         }
-        li:hover{
+        a:hover{
             color: #fff;
             background-color: $mainColor;
         }
-        li.active{
+        a.active{
             color: #fff;
             background-color: $mainColor;
         }

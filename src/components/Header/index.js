@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
 import './style.scss';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-
+import routesConfig from '../../config/router';
 
 const Header = (props) => {
     const menuItems = ["最新優利專案", "個人信用貸款", "二順位貸款", "汽車貸款"];
     const [activeOne, setActiveOne] = useState(menuItems[0]);
 
+    console.log(routesConfig);
     return (
         <div className="head">
             <div className="headInfo">
                 <div className="containWidth">
                     <ul>
-                        {menuItems.map((item, index) => {
-                            if (activeOne == item) {
+                        {routesConfig.map(item => {
+                            if (activeOne == item.txt) {
                                 return (
-                                    <li className='active' onClick={() => {
-                                        setActiveOne(item);
-                                    }} key={index}>{item}</li>
+                                    <Link className='active' onClick={() => {
+                                        setActiveOne(item.txt);
+                                    }} key={item.key} to={item.path}>{item.txt}</Link>
                                 )
                             } else {
                                 return (
-                                    <li onClick={() => {
-                                        setActiveOne(item);
-                                    }} key={index}>{item}</li>
+                                    <Link onClick={() => {
+                                        setActiveOne(item.txt);
+                                    }} key={item.key} to={item.path}>{item.txt}</Link>
                                 )
                             }
 
