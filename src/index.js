@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
             {routesConfig.map(item => {
               return (
-                <Route exact path={item.path}>
+                <Route key={item.path} exact path={item.path}>
                   {item.component}
                 </Route>
               )
@@ -31,9 +31,7 @@ class App extends Component {
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <App />
+  ,document.getElementById('root')
 );
 

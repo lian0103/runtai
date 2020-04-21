@@ -4,28 +4,34 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import routesConfig from '../../config/router';
+import { useLocation } from "react-router-dom";
 
 const Header = (props) => {
-    const menuItems = ["最新優利專案", "個人信用貸款", "二順位貸款", "汽車貸款"];
-    const [activeOne, setActiveOne] = useState(menuItems[0]);
+    const { pathname } = useLocation();
+    const activeTarget = routesConfig.find(item => {
+        if (item.path == pathname) {
+            return item.txt;
+        }
+    });
+    const [activeOne, setActiveOne] = useState(activeTarget.path);
+    const isHome = activeTarget.path == '/' ? true:false;
 
-    console.log(routesConfig);
     return (
         <div className="head">
             <div className="headInfo">
                 <div className="containWidth">
                     <ul>
                         {routesConfig.map(item => {
-                            if (activeOne == item.txt) {
+                            if (activeOne == item.path) {
                                 return (
                                     <Link className='active' onClick={() => {
-                                        setActiveOne(item.txt);
+                                        setActiveOne(item.path);
                                     }} key={item.key} to={item.path}>{item.txt}</Link>
                                 )
                             } else {
                                 return (
                                     <Link onClick={() => {
-                                        setActiveOne(item.txt);
+                                        setActiveOne(item.path);
                                     }} key={item.key} to={item.path}>{item.txt}</Link>
                                 )
                             }
@@ -40,11 +46,13 @@ const Header = (props) => {
                 </div>
             </div>
 
-            <div className="headMenu">
+            <div className="headMenu"
+                style={isHome?{}:{"position":"unset","top":"unset","left":"unset","backgroundColor": "#CC6"}}
+            >
                 <div className="containWidth">
                     <div className='logobox'>
                         <img src="https://picsum.photos/45/45/?random=1" />
-                        <strong>潤泰財富資產管理</strong>  
+                        <strong>潤泰財富資產管理</strong>
                         <span>RUN TAI</span>
                     </div>
                     <div className='contactInfo'>
@@ -53,7 +61,7 @@ const Header = (props) => {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 
