@@ -3,7 +3,7 @@ import './style.scss';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import routesConfig from '../../config/router';
+import {routesConfig} from '../../config/router';
 import { useLocation } from "react-router-dom";
 
 const Header = (props) => {
