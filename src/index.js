@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './media/css/reset.scss'
 import './media/css/global.scss';
 import Header from './components/Header';
+import NoMatch from './pages/NoMatch';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link ,useLocation } from "react-router-dom";
 import routesConfig from './config/router';
 
 class App extends Component {
@@ -22,6 +23,9 @@ class App extends Component {
                 </Route>
               )
             })}
+            <Route path="*">
+              <NoMatch />
+            </Route>
           </Switch>
         </Router>
       </div>
@@ -32,6 +36,6 @@ class App extends Component {
 
 ReactDOM.render(
   <App />
-  ,document.getElementById('root')
+  , document.getElementById('root')
 );
 

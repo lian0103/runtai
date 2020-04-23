@@ -8,21 +8,17 @@ import { useLocation } from "react-router-dom";
 
 const Header = (props) => {
     const { pathname } = useLocation();
-    const activeTarget = routesConfig.find(item => {
-        if (item.path == pathname) {
-            return item.txt;
-        }
-    });
-    const [activeOne, setActiveOne] = useState(activeTarget.path);
-    const isHome = activeTarget.path == '/' ? true:false;
-
+    const hasTargetRoute =  routesConfig.find( item => item.path == pathname ) ;
+    const targetRoute = hasTargetRoute === undefined ? {"path":''} : hasTargetRoute;
+    const [activeOne, setActiveOne] = useState(targetRoute.path);
+    const isHome = targetRoute.path == '/' ? true:false;
     return (
         <div className="head">
             <div className="headInfo">
                 <div className="containWidth">
                     <ul>
                         {routesConfig.map(item => {
-                            if (activeOne == item.path) {
+                            if (item.path == activeOne) {
                                 return (
                                     <Link className='active' onClick={() => {
                                         setActiveOne(item.path);
