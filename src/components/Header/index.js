@@ -12,9 +12,20 @@ const Header = (props) => {
     const targetRoute = hasTargetRoute === undefined ? {"path":''} : hasTargetRoute;
     const [activeOne, setActiveOne] = useState(targetRoute.path);
     const isHome = targetRoute.path == '/' ? true:false;
+
+    
+    const [scrollState,setScrollState] = useState(window.pageYOffset);
+    window.addEventListener('scroll',function(){
+        let bodyTop =window.pageYOffset;
+        this.console.log(bodyTop);
+        setScrollState(bodyTop);
+    });
+
+    const headstyle = {"position":"fixed","top":"0","z-index":"10"};
+
     return (
         <div className="head">
-            <div className="headInfo">
+            <div className="headInfo" style={scrollState >= 80 ? headstyle:{}}>
                 <div className="containWidth">
                     <ul>
                         {routesConfig.map(item => {
