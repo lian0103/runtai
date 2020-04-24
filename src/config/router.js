@@ -9,7 +9,7 @@ import NoMatch from '../pages/NoMatch';
 export const routesConfig = [
     {
         key: 1,
-        path: '/',
+        path: '/runtai',
         txt: '最新優利專案',
         component: Home
     },
