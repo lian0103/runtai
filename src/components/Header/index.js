@@ -13,15 +13,18 @@ const Header = (props) => {
     const [activeOne, setActiveOne] = useState(targetRoute.path);
     const isHome = targetRoute.path == '/' ? true:false;
 
-    
+    const handleMove = () => {
+        let target = document.getElementById('footer');
+        let bodyTop = target.scrollTop;
+        window.scrollTo(bodyTop,2000);//改
+    }
     const [scrollState,setScrollState] = useState(window.pageYOffset);
     window.addEventListener('scroll',function(){
         let bodyTop =window.pageYOffset;
-        this.console.log(bodyTop);
         setScrollState(bodyTop);
     });
 
-    const headstyle = {"position":"fixed","top":"0","z-index":"10"};
+    const headstyle = {"position":"fixed","top":"0","zIndex":"10"};
 
     return (
         <div className="head">
@@ -46,7 +49,7 @@ const Header = (props) => {
                         })}
                     </ul>
                     <div className="contact">
-                        <span>
+                        <span onClick={handleMove}>
                             <FontAwesomeIcon icon={faCoffee} />
                             服務據點</span>
                     </div>

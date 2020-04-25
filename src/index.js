@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './media/css/reset.scss'
 import './media/css/global.scss';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import {MainContent , withRouterConfig } from './config/router';
 
 const App = (props) => {
@@ -14,6 +15,8 @@ const App = (props) => {
           <Header />
 
           <MainContent />
+
+          <Footer/>
 
       </div >
     </>
