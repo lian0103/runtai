@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/runtai/precache-manifest.234667aed89f9f5c2a7a0ab08277d92e.js"
+  "/runtai/precache-manifest.7dc01fc077d3001df0641bfd81b0b9fc.js"
 );
 
 self.addEventListener('message', (event) => {

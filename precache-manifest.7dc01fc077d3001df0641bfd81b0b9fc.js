@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6bafbf86c08af329be0970a0fe43a001",
+    "revision": "d32ad0ba86cd7792387097980139f1e8",
     "url": "/runtai/index.html"
   },
   {
-    "revision": "8edaca6be5c31aaf386a",
-    "url": "/runtai/static/css/main.f6e203ac.chunk.css"
+    "revision": "11ea25bbeafe55f4585c",
+    "url": "/runtai/static/css/main.c767593f.chunk.css"
   },
   {
-    "revision": "ca11e48803b7c34ff639",
-    "url": "/runtai/static/js/2.d95b97ea.chunk.js"
+    "revision": "2598d88036879e301984",
+    "url": "/runtai/static/js/2.d96f6338.chunk.js"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/runtai/static/js/2.d95b97ea.chunk.js.LICENSE.txt"
+    "revision": "876e403427d7be82fb4e8ac24123aaf3",
+    "url": "/runtai/static/js/2.d96f6338.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8edaca6be5c31aaf386a",
-    "url": "/runtai/static/js/main.1e817b33.chunk.js"
+    "revision": "11ea25bbeafe55f4585c",
+    "url": "/runtai/static/js/main.f4b2df81.chunk.js"
   },
   {
     "revision": "effddf1af13e89f09e25",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "83edd1086c9fe6576f6d4cb58dbed0d6",
     "url": "/runtai/static/media/abs-bg3.83edd108.png"
+  },
+  {
+    "revision": "3acc4ffa5b3b2f06e10cfb3250abbeba",
+    "url": "/runtai/static/media/cat_icon.3acc4ffa.png"
   },
   {
     "revision": "9f9f18b3fca779f48ee83dda8150b245",
