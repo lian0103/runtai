@@ -1,11 +1,19 @@
-import React from "react";
+import React , {useState} from "react";
 import demo04 from '../../media/img/demo04.jpg';
 import './style.scss';
+import InfoModal from "../InfoModal";
+import { dataList } from "./data";
 const PreferentialBlock = (props) => {
 
+    const [dataTarget, setDataTarget] = useState(undefined);
+    const [isInfoModalshow, setIsInfoModalshow] = useState(false);
     return (
         <>
-
+            <InfoModal
+                isInfoModalshow={isInfoModalshow}
+                setIsInfoModalshow={setIsInfoModalshow}
+                data={dataTarget}
+            />
             <div className="containWidth">
                 <div className="preferentialBox">
                     <h2>我想找...</h2>
@@ -19,7 +27,10 @@ const PreferentialBlock = (props) => {
                             貸款費用: 6,000元<br />
                             準備文件: 身分證、財力證明文件<br />
                             (所得稅扣繳憑單、薪轉存摺封面及近半年內頁、薪資證明、報稅資料擇一即可)</p>
-                            <span>更多</span>
+                            <span onClick={() => {
+                                setIsInfoModalshow(true);
+                                setDataTarget(dataList[0]);
+                            }}>更多</span>
                         </div>
                     </div>
                 </div>
@@ -32,7 +43,10 @@ const PreferentialBlock = (props) => {
                             <p>申請門檻低：汽車抵押貸款因為有汽車作為抵押，貸款公司對借款人比較放心，所以對徵信沒有太嚴格的要求，簡直是有信用「瑕疵」的借款人的「福音」。<br /><br />
                                 放款速度快：車子抵押貸款流程簡單，貸款公司的審批速度很快。借款人將手續準備齊全，最快當天便可獲得貸款資金，對於急需資金的借款人來說，辦理汽車抵押貸款，無疑是快速獲得資金的好辦法。
                             </p>
-                            <span>更多</span>
+                            <span onClick={() => {
+                                setIsInfoModalshow(true);
+                                setDataTarget(dataList[1]);
+                            }}>更多</span>
                         </div>
                     </div>
                 </div>
