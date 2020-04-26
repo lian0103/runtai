@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d32ad0ba86cd7792387097980139f1e8",
+    "revision": "3082521e9b75bf9fdc7373b253942a5f",
     "url": "/runtai/index.html"
   },
   {
-    "revision": "11ea25bbeafe55f4585c",
-    "url": "/runtai/static/css/main.c767593f.chunk.css"
+    "revision": "2ed16dae1c23b5e01425",
+    "url": "/runtai/static/css/main.b7eb587e.chunk.css"
   },
   {
-    "revision": "2598d88036879e301984",
-    "url": "/runtai/static/js/2.d96f6338.chunk.js"
+    "revision": "da1f44c43221b96a91be",
+    "url": "/runtai/static/js/2.fe2dd02d.chunk.js"
   },
   {
     "revision": "876e403427d7be82fb4e8ac24123aaf3",
-    "url": "/runtai/static/js/2.d96f6338.chunk.js.LICENSE.txt"
+    "url": "/runtai/static/js/2.fe2dd02d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "11ea25bbeafe55f4585c",
-    "url": "/runtai/static/js/main.f4b2df81.chunk.js"
+    "revision": "2ed16dae1c23b5e01425",
+    "url": "/runtai/static/js/main.5ec9a099.chunk.js"
   },
   {
     "revision": "effddf1af13e89f09e25",
