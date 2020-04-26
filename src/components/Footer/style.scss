@@ -8,17 +8,30 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 30px 50px;
+        padding: 30px 20px;
+        .fbox{
+            flex-basis: 300px;
+            flex-grow: 1;
+        }
+
         .map{
-            margin-left: 20%;
+            margin-left: 10%;
         }
 
         .info{
-            flex-basis: 350px;
             padding: 0 40px;
             h3{
                 font-size: $fontSizeMedium;
                 font-weight: 500;
+                position: relative;
+            }
+            h3:before{
+                content: '';
+                width: 2px;
+                height: $fontSizeMedium;
+                border: 3px solid $mainColor;
+                left: -20px;
+                position: absolute;
             }
             p{
                 font-size: $fontSizeSmall;

@@ -1,8 +1,11 @@
 import React from "react";
+import './style.scss';
 
 const CarLoan = ()=>{
     return(
-        <h1> CarLoan </h1>
+        <div className='pageContent'>
+            <h1> CarLoan </h1>
+        </div>
     )
 }
 

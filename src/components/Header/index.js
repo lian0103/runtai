@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import {routesConfig} from '../../config/router';
 import { useLocation } from "react-router-dom";
+import iconCat from '../../media/img/cat_icon.png';
 
 const Header = (props) => {
     const { pathname } = useLocation();
@@ -61,7 +62,7 @@ const Header = (props) => {
             >
                 <div className="containWidth">
                     <div className='logobox'>
-                        <img src="https://picsum.photos/45/45/?random=1" />
+                        <img src={iconCat} />
                         <strong>潤泰財富資產管理</strong>
                         <span>RUN TAI</span>
                     </div>

@@ -6,7 +6,7 @@ const NoMatch = () => {
     let location = useLocation();
 
     return (
-        <div className="noMatchBox">
+        <div className="noMatchBox pageContent">
             <h3>
                 No match for <code>{location.pathname}</code>
             </h3>

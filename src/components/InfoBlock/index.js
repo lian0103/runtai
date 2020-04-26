@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPeopleCarry, faThumbsUp, faAward, faUserTie } from '@fortawesome/free-solid-svg-icons'
+import { faPeopleCarry, faThumbsUp, faAward, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import './style.scss';
 
 const InfoBlock = (props) => {
